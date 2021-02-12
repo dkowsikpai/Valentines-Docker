@@ -1,0 +1,67 @@
+version: "3.9"
+   
+services:
+  
+  web:
+    restart: always
+    container_name: django_valentines
+    build: .
+    command: gunicorn valentine.wsgi:application --bind 0.0.0.0:8000
+    # command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/valentines
+      # Shared Storage for nginx - staticfiles
+      - static_volume:/valentines/staticfiles
+      
+    ports:
+      - 8000
+      # For Dev 
+      # - 8000:8000
+    # For environment vars 
+    env_file:
+      # - ./.env.dev
+      - ./.env.prod
+    depends_on:
+      - db
+  
+  nginx:
+    container_name: django_valentines_nginx
+    restart: always
+    build: ./nginx
+    ports:
+      - 1337:80
+    depends_on:
+      - web
+    volumes:
+      # Shared storage for staticfiles
+      - static_volume:/valentines/staticfiles
+
+  db:
+    container_name: django_valentines_mysql
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports: 
+      - 3306
+    environment:
+      MYSQL_DATABASE: valentines
+      MYSQL_USER: kndcse
+      MYSQL_PASSWORD: kndcse@1822
+      MYSQL_ROOT_PASSWORD: kndcse@1822root
+    volumes:
+      - my-datavolume:/var/lib/mysql
+
+  phpmyadmin:
+    container_name: django_valentines_phpmyadmin
+    restart: always
+    image: phpmyadmin/phpmyadmin
+    links: 
+      - db:db
+    ports: 
+      - 8000:80
+    environment:
+      MYSQL_ROOT_PASSWORD: kndcse@1822root
+
+volumes:
+  static_volume:
+  my-datavolume:
