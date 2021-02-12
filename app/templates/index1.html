@@ -8,7 +8,7 @@
     <title>Dyuthi Valentines Day</title>
     <link rel="shortcut icon" type="image/png" href="{% static 'img/logo_dyuthi.png' %}"/>
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic&family=Montserrat:wght@800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
@@ -19,36 +19,33 @@
 
 <style type="text/css">
     .reg-btn {
-        background-color: #ba9a6b;
+        background-color: rgb(255, 24, 92);
     }
 
     .reg-btn:hover{
-        background-color: #846b45;
+        background-color: rgba(191, 21, 74, 0.95);
     }
 </style>
 
 <body id="page-top">
-    <img src="{% static 'img/pv.png' %}" style="width: 100px; height: 100px; position: absolute; z-index: 2; top: 20px; left: 20px;"/>
-    <header class="d-flex masthead mt-0" style="background-image:url('{% static 'img/valentines2.png' %}'); height: 100%; width: 100%; background-size: cover">
+    <header class="d-flex masthead mt-0" style="background-image:url('{% static 'img/Valentine.jpg' %}'); height: 100%; width: 100%; background-repeat: repeat">
         {% csrf_token %}
         <div class="container my-auto text-center mt-0 ">
             <div class="mb-5 mt-0">
-               <img style="height:15em;width:21em" src="{% static 'img/valentines2-name.png' %}" alt="">
+               <img style="height:15em;width:21em" src="{% static 'img/Valentine.png' %}" alt="">
             </div>
 
-{#            <h1 class="mb-1" style="color: rgba(194,231,34,0.8);">GEC Valentine</h1>#}
-{#            <h3 class="mb-5" style="color: rgba(191,191,191,0.88); font-family: 'Montserrat', sans-serif;">Find Your Love</h3>#}
-{# Registration #}
-            <a style="color: rgba(247,247,247,0.76); padding: 10px 15px; font-family: 'Montserrat', sans-serif; font-weight: 800"
-               class="btn js-scroll-trigger reg-btn" role="button" href="{% url 'form' %}">register now</a><br><br>
-{# Result #}
+            <h1 class="mb-1" style="color: rgba(194,231,34,0.8);">GEC Valentine</h1>
+            <h3 class="mb-5" style="color: rgba(191,191,191,0.88); font-family: 'Montserrat', sans-serif;">Find Your Love</h3>
+            <a style="color: rgba(247,247,247,0.76);" class="btn btn-xl js-scroll-trigger reg-btn" role="button" href="{% url 'form' %}">Register Now</a><br><br>
+{#            <h6 class="mt-2" style="color: rgba(191,191,191,0.88); font-family: 'Montserrat', sans-serif;">View profile</h6>#}
 {#            <div class="input-group col-lg-4 mx-auto">#}
 {#              <input type="text" id="profile_input" style="background-color: rgba(84,84,84,0.8); color: #fff;" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Enter your registered phone number">#}
 {#              <div class="input-group-append">#}
-{#                <span id="span_click" class="input-group-text" style="background-color: rgba(84,84,84,0.8); color: #fff; "><i class="fa fa-arrow-right"></i></span>#}
+{#                <span id="span_click" class="input-group-text" style="background-color: rgba(84,84,84,0.8); color: #fff;"><i class="fa fa-arrow-right"></i></span>#}
 {#              </div>#}
-{#            </div>#}
-{#            <div class="overlay"></div>#}
+{#            </div> #}
+            <div class="overlay"></div>
         </div>
     </header>
 {#    <footer class="footer text-center">#}

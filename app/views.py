@@ -23,7 +23,7 @@ def home(request):
 
 def form(request):
     if request.method == "GET":
-        analyzer()
+        # analyzer()
         data = Interests.objects.all()
         return render(request, 'form.html', {'data': data})
     elif request.method == "POST":

@@ -9,6 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="{% static 'img/logo_dyuthi.png' %}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'bootstrap/css/Responsive-Form-1.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap/css/Responsive-Form.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap/css/styles.css' %}">
@@ -16,18 +17,19 @@
 </head>
 <style type="text/css">
     .reg-btn {
-        background-color: rgb(255, 24, 92);
+        font-family: 'Montserrat', sans-serif;
+        background-color: #ba9a6b;
     }
 
     .reg-btn:hover{
-        background-color: rgba(191, 21, 74, 0.95);
+        background-color: #7b6545;
     }
 
 
 </style>
 
 
-<body style="background-image: url('{% static 'img/Valentine.jpg' %}');" >
+<body style="background-image: url('{% static 'img/valentines2.png' %}');" >
     <div class="container-fluid">
 
         <div>
@@ -101,7 +103,7 @@
                             <div class="col-md-8 offset-md-1">
                                 <p style="margin-left:2%;font-family:Roboto, sans-serif;font-size:24px;color:white"><strong>Phone Number</strong></p>
                             </div>
-                            <div class=" col-md-10 offset-md-1"><input id="phmob" class="input_content" type="text" maxlength = "13" style="margin-left:0px;font-family:Roboto, sans-serif; width: 100%; color: #fff;" placeholder="+91"></div>
+                            <div class=" col-md-10 offset-md-1"><input id="phmob" class="input_content" type="text" maxlength = "13" style="margin-left:0px;font-family:Roboto, sans-serif; width: 100%; color: #fff;" placeholder="10 digit"></div>
                         </div>
                         <div class="form-row" style="margin-right:0px;margin-left:0px;padding-top:24px;">
                             <div class="col-md-8 offset-md-1">
@@ -121,6 +123,8 @@
                             <div class="col-12 col-md-4 m-auto d-block">
 {#                                <button class="btn reg-btn btn-lg" style="color: rgba(247,247,247,0.76);" type="reset">Clear </button>#}
                                 <button id="submit_btn" class="btn reg-btn mb-3 " style="color: rgba(247,247,247,0.76); width: 100%;" type="submit">Submit</button>
+                                <p style="color: white; font-size: 0.8rem" class="m-1 text-center">We will not share your personal information with any third party without your concent</p>
+
                             </div>
                         </div>
                     </div>

@@ -122,13 +122,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/img" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/img" />
+      <recent name="$PROJECT_DIR$/app/templates" />
       <recent name="C:\Users\Dinesan\Desktop\private\web\valentines_day\app\templates" />
       <recent name="C:\Users\Dinesan\Desktop\private\web\valentines_day\static\img" />
       <recent name="C:\Users\Dinesan\Desktop\private\web\valentines_day\valentine" />
@@ -171,7 +173,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581590993529</updated>
       <workItem from="1613150651613" duration="98000" />
-      <workItem from="1613156528581" duration="166000" />
+      <workItem from="1613156528581" duration="4237000" />
     </task>
     <servers />
   </component>
