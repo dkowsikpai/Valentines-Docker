@@ -14,7 +14,7 @@ services:
       - static_volume:/valentines/staticfiles
       
     ports:
-      - 8000:8000
+      - 8000
       # For Dev 
       # - 8000:8000
     # For environment vars 
@@ -32,8 +32,8 @@ services:
       # Dev
       # - 1337:80
       # Prod
-      - "80:80"
-      - "443:443"
+      - 80:80
+      - 443:443
     depends_on:
       - web
     volumes:
