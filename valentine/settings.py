@@ -90,7 +90,7 @@ else:
         'NAME': os.environ.get("DATABASE"),
         'USER': os.environ.get("USER"),
         'PASSWORD': os.environ.get("PASSWORD"),
-        'HOST': "db",
+        'HOST': "localhost",
         'PORT': 3306
     }
 }
