@@ -29,7 +29,11 @@ services:
     restart: always
     build: ./nginx
     ports:
-      - 1337:80
+      # Dev
+      # - 1337:80
+      # Prod
+      - "80:80"
+      - "443:443"
     depends_on:
       - web
     volumes:
