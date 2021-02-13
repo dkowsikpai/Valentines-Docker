@@ -24,21 +24,21 @@ services:
     depends_on:
       - db
   
-  # nginx:
-  #   container_name: django_valentines_nginx
-  #   restart: always
-  #   build: ./nginx
-  #   ports:
-  #     # Dev
-  #     - 1337:80
-  #     # Prod
-  #     # - "80:80"
-  #     # - "443:443"
-  #   depends_on:
-  #     - web
-  #   volumes:
-  #     # Shared storage for staticfiles
-  #     - static_volume:/valentines/staticfiles
+  nginx:
+    container_name: django_valentines_nginx
+    restart: always
+    build: ./nginx
+    ports:
+      # Dev
+      - 1337:80
+      # Prod
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - web
+    volumes:
+      # Shared storage for staticfiles
+      - static_volume:/valentines/staticfiles
 
   db:
     container_name: django_valentines_mysql
