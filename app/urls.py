@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from . import views
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'^form/$', views.form, name='form'),
+    # url(r'^form/$', views.form, name='form'),
     # path('profile/<slug:foo>', views.getProfile, name="profile"),
     path('scratchcard/<slug:foo>', views.scratchcard, name="scratch_card"),
     # path('pair_profile/<slug:foo>', views.pairProfile, name="pair_prof")
