@@ -74,8 +74,8 @@ def form(request):
 
 
 def analyzer():
-    boys = RegisteredMembers.objects.filter(gender=True)
-    girls = RegisteredMembers.objects.filter(gender=False)
+    boys = RegisteredMembers.objects.filter(gender=True, blocked=False)
+    girls = RegisteredMembers.objects.filter(gender=False, blocked=False)
     all_inter = []
     data = Interests.objects.all()
     for i in data:
@@ -112,23 +112,26 @@ def analyzer():
     pair_list = []
     for i in boys_list:
         for j in girls_list:
-            print(girls_list)
+            # print(girls_list)
             b = int(i[1], 2)
             g = int(j[1], 2)
             combine = bin(b & g)
-            if combine != bin(0):
+            if combine == bin(0):
                 # i[0].pair_unique_id = j[0].unique_id
                 girls_list.remove(j)
-                print(girls_list)
+                print(len(girls_list))
                 pair_list.append((i[0], j[0]))
                 break
-    print(pair_list)
-    for i in pair_list:
-        print((i[0].name, i[1].name))
-        i[0].pair_unique_id = i[1].unique_id
-        i[1].pair_unique_id = i[0].unique_id
-        i[0].save()
-        i[1].save()
+    # print(pair_list)
+    with open("pair_details.txt", "w") as f:
+        for i in pair_list:
+            print((i[0].name, i[1].name))
+            f.write(i[0].name + " " + i[0].remarks + " " + i[0].native_place + "\n")
+            f.write(i[1].name + " " + i[1].remarks + " " + i[1].native_place + "\n\n")
+            i[0].pair_unique_id = i[1].unique_id
+            i[1].pair_unique_id = i[0].unique_id
+            i[0].save()
+            i[1].save()
 
 
 def randomString(stringLength=10):
