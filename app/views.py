@@ -116,7 +116,7 @@ def analyzer():
             b = int(i[1], 2)
             g = int(j[1], 2)
             combine = bin(b & g)
-            if combine == bin(0):
+            if combine != bin(0):
                 # i[0].pair_unique_id = j[0].unique_id
                 girls_list.remove(j)
                 print(len(girls_list))
