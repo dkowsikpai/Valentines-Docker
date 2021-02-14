@@ -26,7 +26,7 @@ with open("secrets.txt", "r") as f:
 SECRET_KEY = l[0]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['*']
